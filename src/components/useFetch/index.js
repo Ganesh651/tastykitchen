@@ -8,7 +8,7 @@ const apiConstraints = {
   failure: "FAILURE"
 }
 
-const useFetch = (url, options, rating) => {
+const useFetch = (url, options, offset, limit, rating) => {
   const [apiStatus, setApiStatus] = useState(apiConstraints.initial)
   const [fetchedData, setFetchedData] = useState([])
 
@@ -17,18 +17,19 @@ const useFetch = (url, options, rating) => {
       setApiStatus(apiConstraints.in_progress)
       const response = await fetch(url, options)
       const data = await response.json()
-      setFetchedData(data)
       if (response.ok === true) {
         setApiStatus(apiConstraints.success)
+        setFetchedData(data)
       } else {
         setApiStatus(apiConstraints.failure)
       }
     }
     getData()
 
-  }, [rating])
+  }, [offset, limit, rating])
 
   return { apiStatus, fetchedData }
+
 }
 
 export default useFetch

@@ -65,11 +65,13 @@ const Offers = () => {
       ]
     };
     return (
-      <Slider {...settings}>
-        {offers.map(offer => (
-          <img key={offer.id} className='slide-image' src={offer.image_url} alt="offer" />
-        ))}
-      </Slider>
+      <div className='slider-container'>
+        <Slider {...settings}>
+          {offers.map(offer => (
+            <img key={offer.id} className='slide-image' src={offer.image_url} alt="offer" />
+          ))}
+        </Slider>
+      </div>
     )
   }
 
