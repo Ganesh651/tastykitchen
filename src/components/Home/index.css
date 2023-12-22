@@ -1,0 +1,9 @@
+.home-container {
+  padding: 10px 120px;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}

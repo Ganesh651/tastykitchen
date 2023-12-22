@@ -1,11 +1,17 @@
 import React from 'react'
+import Header from '../Header'
+import Footer from '../Footer'
 import './index.css'
 
 const RestaurantDetails = () => {
   return (
-    <div>
-      RestaurantDetails
-    </div>
+    <>
+      <Header />
+      <div>
+        RestaurantDetails
+      </div>
+      <Footer />
+    </>
   )
 }
 

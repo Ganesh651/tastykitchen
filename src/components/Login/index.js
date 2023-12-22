@@ -20,6 +20,7 @@ import {
   LoginImageMobile,
   LoadingContainer
 } from './styles.js'
+import { loginurl } from '../urls.js'
 
 const Login = () => {
   const [username, setUsername] = useState("")
@@ -47,9 +48,8 @@ const Login = () => {
       method: "POST",
       body: JSON.stringify(userDetails)
     }
-    const url = 'https://apis.ccbp.in/login'
     setIsLoading(true)
-    const response = await fetch(url, options)
+    const response = await fetch(loginurl, options)
     setIsLoading(false)
     const data = await response.json()
     console.log(data)
@@ -77,7 +77,7 @@ const Login = () => {
           <WebsiteLogoContainer>
             <WebsiteLogo src="https://res.cloudinary.com/dky69roxl/image/upload/v1692778547/Frame_274_ptjrpu.svg"
               alt="website logo" />
-            <WebsiteName>Tasty Kitchen</WebsiteName>
+            <WebsiteName>Tasty Kitchens</WebsiteName>
             <LoginText>Login</LoginText>
           </WebsiteLogoContainer>
           <InputContainer>
