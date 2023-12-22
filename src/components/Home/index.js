@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Cookies from 'js-cookie'
 import { BsFilterLeft } from "react-icons/bs";
 import { ThreeDots } from 'react-loader-spinner'
+import { FaAngleLeft } from "react-icons/fa6";
+import { FaAngleRight } from "react-icons/fa6";
 import Header from '../Header'
 import Footer from '../Footer'
 import Offers from '../Offers'
@@ -29,8 +31,24 @@ const Home = () => {
   const [activePage, setActivePage] = useState(1)
   const [rating, setRating] = useState(sortByOptions[0].value)
   const offset = (activePage - 1) * limit
+
+  const onRatingFilter = e => {
+    setRating(e.target.value)
+  }
+
+  const handdleLeftArrow = () => {
+    if (activePage > 1) {
+      setActivePage(activePage - 1)
+    }
+  }
+
+  const handdleRightArrow = () => {
+    if (activePage < 4) {
+      setActivePage(activePage + 1)
+    }
+  }
+
   const token = Cookies.get("jwt_token")
-  console.log(rating)
   const options = {
     method: "GET",
     headers: {
@@ -38,17 +56,15 @@ const Home = () => {
     }
   }
 
-  const restaurantList = useFetch(`https://apis.ccbp.in/restaurants-list?offset=${offset}&limit=${limit}&sort_by_rating=${rating}`, options, rating, limit, offset)
+  const restaurantList = useFetch(`https://apis.ccbp.in/restaurants-list?search=${""}&offset=${offset}&limit=${limit}&sort_by_rating=${rating}`, options, rating, limit, offset)
 
   const { apiStatus, fetchedData } = restaurantList
 
   const { restaurants } = fetchedData
 
-  console.log(restaurants, apiStatus)
-
+  console.log(restaurants)
 
   const renderLoadingView = () => {
-    console.log("Loading...")
     return (
       <div className='loading-container'>
         <ThreeDots height={50} width={50} color="#F7931E" />
@@ -56,9 +72,6 @@ const Home = () => {
     )
   }
 
-  const onRatingFilter = e => {
-    setRating(e.target.value)
-  }
 
   const renderSuccessView = () => (
     <div className='restaurants-container'>
@@ -81,6 +94,17 @@ const Home = () => {
         {restaurants.map(restaurant => (
           <RestaurantsList restaurant={restaurant} key={restaurant.id} />
         ))}
+      </div>
+      <div className='pagenation-container'>
+        <div className='container'>
+          <div className='arrow-button' onClick={handdleLeftArrow}>
+            <FaAngleLeft />
+          </div>
+          <span className='page-count'>0{activePage} of 04</span>
+          <div className='arrow-button' onClick={handdleRightArrow}>
+            <FaAngleRight />
+          </div>
+        </div>
       </div>
     </div>
   )
