@@ -52,7 +52,6 @@ const Login = () => {
     const response = await fetch(loginurl, options)
     setIsLoading(false)
     const data = await response.json()
-    console.log(data)
     if (response.ok === true) {
       renderSuccessView(data.jwt_token)
     } else {

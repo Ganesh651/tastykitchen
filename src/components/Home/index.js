@@ -62,8 +62,6 @@ const Home = () => {
 
   const { restaurants } = fetchedData
 
-  console.log(restaurants)
-
   const renderLoadingView = () => {
     return (
       <div className='loading-container'>

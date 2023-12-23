@@ -1,0 +1,39 @@
+.no-orders-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-orders-image {
+  width: 375px;
+  height: 300px;
+}
+
+.no-orders-heading {
+  color: #1E293B;
+  font-family: "DM Sans";
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+}
+
+.no-orders-description {
+  color: #64748B;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.order-now-button {
+  background-color: #F7931E;
+  color: #fff;
+  font-family: "DM Sans";
+  border: 0;
+  height: 38px;
+  width: 120px;
+  cursor: pointer;
+  border-radius: 5px;
+}

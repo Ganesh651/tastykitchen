@@ -1,0 +1,14 @@
+.success-icon {
+  height: 60px;
+  width: 60px;
+}
+
+.payment-description {
+  color: #64748B;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+}
