@@ -1,4 +1,15 @@
-.cart-container {
-  padding: 20px 120px;
+.cart {
+  padding: 40px 120px 20px 120px;
   min-height: 100vh;
+}
+.cart-container {
+  background-color: #0B69FF1A;
+  padding: 30px 60px 30px 30px;
+  border-radius: 10px;
+
+}
+
+.cart-header-container {
+  display: flex;
+  justify-content: space-between;
 }

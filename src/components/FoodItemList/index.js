@@ -1,12 +1,11 @@
 import React, { useContext } from 'react'
 import { FaStar } from 'react-icons/fa'
-import QuantityButtons from '../QuantityButtons'
 import CartContext from '../../context/CartContext'
 import './index.css'
 
 const FoodItemList = (props) => {
-  const { foodItem, increaseItem, decreaseItem } = props
-  const { AddToCart, } = useContext(CartContext)
+  const { foodItem } = props
+  const { AddToCart } = useContext(CartContext)
 
   const onAddFoodItem = () => {
     AddToCart(foodItem.image_url, foodItem.cost, foodItem.name)
@@ -22,10 +21,6 @@ const FoodItemList = (props) => {
           <FaStar style={{ color: "#FFCC00", height: "12px", width: "12px", marginRight: "3px" }} />
           <span className='food-item-rating'>{foodItem.rating}</span>
         </div>
-        <QuantityButtons
-          foodItem={foodItem}
-          increaseItem={increaseItem}
-          decreaseItem={decreaseItem} />
         <button type="button" className='add-btn' onClick={onAddFoodItem}>
           ADD
         </button>

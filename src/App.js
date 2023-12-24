@@ -12,22 +12,23 @@ import { v4 as uuidv4 } from 'uuid'
 
 
 const App = () => {
-  const [cartList, setCartList] = useState([])
-  const [foodItemObj, setFoodItemObj] = useState({})
+  const stored = JSON.parse(localStorage.getItem("item"))
+  const [cartList, setCartList] = useState(stored === null ? [] : stored)
   const [quantity, setQuantity] = useState(1)
-  console.log(cartList)
 
-  const AddToCart = (image, name, cost,) => {
+
+  const AddToCart = (image, cost, name) => {
     const newItem = {
       id: uuidv4(),
       image,
-      name,
       cost,
+      name,
       quantity
     }
-
     setCartList(prevState => [...prevState, newItem])
+    localStorage.setItem("item", JSON.stringify(cartList))
   }
+
 
   const increaseQuantity = id => {
     if (quantity >= 1) {

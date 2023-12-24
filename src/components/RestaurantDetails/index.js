@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { } from 'react'
 import Cookies from 'js-cookie'
 import { useParams } from 'react-router-dom'
 import { ThreeDots } from 'react-loader-spinner'
@@ -8,12 +8,12 @@ import Footer from '../Footer'
 import useFetch from '../useFetch'
 import { restaaurantDetailsUrl } from '../urls'
 import FoodItemList from '../FoodItemList'
-import CartContext from '../../context/CartContext'
+// import CartContext from '../../context/CartContext'
 import './index.css'
 
 
 const RestaurantDetails = () => {
-  const { quantity, setQuantity } = useContext(CartContext)
+  // const { quantity, setQuantity } = useContext(CartContext)
   const { id } = useParams()
   const token = Cookies.get("jwt_token")
   const options = {
@@ -36,26 +36,26 @@ const RestaurantDetails = () => {
     )
   }
 
-  const increaseItem = (id) => {
-    fetchedData.food_items.filter(each => {
-      if (each.id === id) {
-        if (quantity >= 1) {
-          setQuantity(quantity + 1)
-        }
-      }
-    });
-  }
+  // const increaseItem = (id) => {
+  //   fetchedData.food_items.filter(each => {
+  //     if (each.id === id) {
+  //       if (quantity >= 1) {
+  //         setQuantity(quantity + 1)
+  //       }
+  //     }
+  //   });
+  // }
 
-  const decreaseItem = (id) => {
-    fetchedData.food_items.map(each => {
-      if (each.id === id) {
-        if (quantity > 1) {
-          setQuantity(quantity - 1)
-        }
-      }
-    });
+  // const decreaseItem = (id) => {
+  //   fetchedData.food_items.filter(each => {
+  //     if (each.id === id) {
+  //       if (quantity > 1) {
+  //         setQuantity(quantity - 1)
+  //       }
+  //     }
+  //   });
 
-  }
+  // }
 
   const renderSuccessView = () => (
     <>
@@ -87,8 +87,7 @@ const RestaurantDetails = () => {
           <FoodItemList
             key={foodItem.id}
             foodItem={foodItem}
-            increaseItem={increaseItem}
-            decreaseItem={decreaseItem} />
+          />
         ))}
       </div>
     </>

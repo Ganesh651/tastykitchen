@@ -1,9 +1,11 @@
 import React from 'react'
 import Cookies from 'js-cookie'
 import { NavLink, useNavigate, Link } from 'react-router-dom'
+// import CartContext from '../../context/CartContext'
 import './index.css'
 
 const Header = () => {
+  // const { cartList } = useContext(CartContext)
   const navigate = useNavigate()
 
   const className = (props) => props.isActive ? "active" : "pending"
@@ -12,6 +14,11 @@ const Header = () => {
     Cookies.remove("jwt_token")
     navigate("/login")
   }
+
+
+  // const cartItemsCount = cartList.length
+
+
 
   return (
     <nav className='navbar'>
@@ -27,11 +34,12 @@ const Header = () => {
         <NavLink to="/" className={className}>
           <span className='nav-item'>Home</span>
         </NavLink>
-        <NavLink to="/profile" className={className}>
+        {/* <NavLink to="/profile" className={className}>
           <span className='nav-item'>Profile</span>
-        </NavLink>
+        </NavLink> */}
         <NavLink to="/cart" className={className}>
           <span className='nav-item'>Cart</span>
+          {/* {cartItemsCount !== 0 && <span>{cartItemsCount}</span>} */}
         </NavLink>
         <button type="button" className='logout-button' onClick={onLogout}>
           Logout
