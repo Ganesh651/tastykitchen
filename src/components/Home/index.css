@@ -1,14 +1,16 @@
 .home-container {
   padding: 10px 120px;
   min-height: 100vh;
+  background-color: #bfbfbf;
 }
 
 .loading-container {
   display: flex;
   flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+  justify-content: flex-end;
+  align-items: center;
 }
+
 .restaurants-container {
   padding: 30px 0;
 }
@@ -50,8 +52,9 @@
   border: 0;
   background-color: transparent;
   outline: none;
-  height: 30px;
   color: #475569;
+  font-size: 15px;
+  padding: 0 5px;
 }
 
 .restaurants-list-container {
@@ -60,6 +63,7 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
 .pagenation-container {
   display: flex;
   justify-content: center;
@@ -90,4 +94,32 @@
   line-height: 27px;
   letter-spacing: 0em;
   text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .home-container {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .restaurants-container {
+    padding: 20px;
+  }
+
+  .heading-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .filter {
+    margin-top: 20px;
+  }
+
+  .restaurants-list-container {
+    margin: 15px 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
 }

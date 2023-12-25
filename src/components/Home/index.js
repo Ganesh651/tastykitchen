@@ -74,7 +74,7 @@ const Home = () => {
   const renderSuccessView = () => (
     <div className='restaurants-container'>
       <span className='heading'>Popular Restaurants</span>
-        <div className='heading-container'>
+      <div className='heading-container'>
         <span className='description-home'>Select Your favourite restaurant special dish and make your day happy...</span>
         <div className='filter'>
           <BsFilterLeft style={{ color: "#475569", height: "20px", width: "20px" }} />
@@ -126,10 +126,10 @@ const Home = () => {
   return (
     <>
       <Header />
-      <div style={{ backgroundColor: "#bfbfbf" }} className='home-container'>
+      <div className='home-container'>
         <Offers />
         {renderRestaurantsList()}
-    </div>
+      </div>
       <Footer />
     </>
 

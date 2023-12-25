@@ -100,3 +100,88 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+@media screen and (max-width: 767px) {
+  .restaurant-detail-container {
+    padding: 0;
+  }
+
+  .specific-restaurant-details {
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .specific-restaurant-image {
+    height: 200px;
+    width: 200px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 110px;
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 0;
+    align-self: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .specific-restaurant-name {
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  .specific-restaurant-cuisine {
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+  .specific-restaurant-location {
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+  .restaurant-food-items-list-container {
+    padding: 20px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .specific-restaurant-image {
+    height: 150px;
+    width: 150px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 0;
+    align-self: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .specific-restaurant-details {
+    padding: 0 10px 0 0;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .specific-restaurant-image {
+    height: 100px;
+    width: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 0;
+    align-self: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .specific-restaurant-details {
+    padding: 0 10px 0 0;
+    align-items: flex-start;
+  }
+}

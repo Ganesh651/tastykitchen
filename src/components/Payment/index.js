@@ -10,19 +10,19 @@ const Payment = () => {
   }
 
   return (
-    <div className='notfound-container'>
+    <div className='payment-container'>
       <img
         src="https://res.cloudinary.com/dky69roxl/image/upload/v1703321194/check-circle.1_1_hec5o2.svg"
         alt="success icon"
         className='success-icon'
       />
       <h2 className='notfound-headng'>Payment Successful</h2>
-      <pre className='payment-description'>
+      <p className='payment-description'>
         Thank you for ordering
         Your payment is successfully completed.
-      </pre>
+      </p>
       <div className='button-container'>
-        <button type="button" className='home-page-button' onClick={goToHomePage}>
+        <button type="button" className='home-button' onClick={goToHomePage}>
           Go to Home page
         </button>
       </div>

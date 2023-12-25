@@ -65,3 +65,74 @@
   font-weight: 700;
   line-height: 24px;
 }
+
+.food-items-mobile {
+  display: none;
+}
+
+.quantity-container-mobile {
+  display: none;
+}
+
+.price-container-mobile {
+  display: none;
+}
+
+.image-mobile {
+  display: none;
+}
+
+.cost-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .food-items-mobile {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .food-items {
+    display: none;
+  }
+
+  .quantity-container {
+    display: none;
+  }
+
+  .quantity-container-mobile {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .price-container {
+    display: none;
+  }
+
+  .price-container-mobile {
+    display: block;
+  }
+
+  .cost-mobile {
+    display: block;
+    color: #FFA412;
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .mobile-view-container {
+    margin-left: 20px;
+    width: 60%;
+  }
+
+  .image-mobile {
+    display: block;
+    height: 100px;
+    width: 150px;
+    max-width: 40%;
+    border-radius: 10px;
+  }
+}

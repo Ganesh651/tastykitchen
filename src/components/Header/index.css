@@ -64,3 +64,23 @@
   line-height: 26px;
   text-align: left;
 }
+
+@media screen and (max-width: 767px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .nav-items-container {
+    display: none;
+  }
+
+  .website-logo {
+    height: 30px;
+    width: 40px;
+  }
+
+  .website-name {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

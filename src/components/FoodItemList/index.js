@@ -16,7 +16,7 @@ const FoodItemList = (props) => {
       <img className='food-item-image' src={foodItem.image_url} alt="food item" />
       <div className='food-item-details'>
         <span className='food-item-name'>{foodItem.name}</span>
-        <span className='food-item-cost'>Rs {foodItem.cost}</span>
+        <span className='food-item-cost'>₹ {foodItem.cost}</span>
         <div className='food-item-rating-container'>
           <FaStar style={{ color: "#FFCC00", height: "12px", width: "12px", marginRight: "3px" }} />
           <span className='food-item-rating'>{foodItem.rating}</span>

@@ -38,3 +38,36 @@
   justify-content: space-between;
   align-items: center;
 }
+
+@media screen and (max-width: 767px) {
+  .footer {
+    padding: 30px;
+  }
+
+  .footer-logo-text {
+    font-family: "DM Sans";
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
+  .footer-logo {
+    width: 40px;
+    height: 32px;
+  }
+
+  .description {
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .social-icons {
+    height: 24px !important;
+    width: 24px !important;
+  }
+}

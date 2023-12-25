@@ -58,3 +58,41 @@
   border-radius: 5px;
   font-size: 10px;
 }
+
+@media screen and (max-width: 767px) {
+  .food-item-container {
+    width: 100%;
+    margin: 0 0 15px 0;
+  }
+
+  .food-item-image {
+    width: 160px;
+    height: 100px;
+    margin-right: 15px;
+  }
+
+  .food-item-name {
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .food-item-cost {
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+
+  .food-item-rating {
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  .food-item-details {
+    width: 50%;
+  }
+}
