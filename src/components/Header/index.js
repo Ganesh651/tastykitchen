@@ -2,6 +2,7 @@ import React from 'react'
 import Cookies from 'js-cookie'
 import { NavLink, useNavigate, Link } from 'react-router-dom'
 // import CartContext from '../../context/CartContext'
+import Hamburger from '../Hamburger'
 import './index.css'
 
 const Header = () => {
@@ -30,6 +31,7 @@ const Header = () => {
           <span className='website-name'>Tasty Kitchens</span>
         </div>
       </Link>
+      <Hamburger />
       <div className='nav-items-container'>
         <NavLink to="/" className={className}>
           <span className='nav-item'>Home</span>
@@ -45,6 +47,7 @@ const Header = () => {
           Logout
         </button>
       </div>
+
     </nav>
   )
 }
