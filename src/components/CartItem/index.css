@@ -86,9 +86,17 @@
   display: none;
 }
 
+.delete-button {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 767px) {
   .food-items-mobile {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 20px;
   }
 
@@ -103,6 +111,7 @@
   .quantity-container-mobile {
     margin: 10px 0;
     display: flex;
+    justify-content: center;
     align-items: center;
   }
 
@@ -125,14 +134,16 @@
 
   .mobile-view-container {
     margin-left: 20px;
-    width: 60%;
+    text-align: center;
   }
 
   .image-mobile {
     display: block;
-    height: 100px;
-    width: 150px;
-    max-width: 40%;
+    height: 70px;
     border-radius: 10px;
+  }
+
+  .delete-button {
+    display: none;
   }
 }

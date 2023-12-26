@@ -1,18 +1,23 @@
 import React, { useContext } from 'react'
+import { IoCloseCircleOutline } from 'react-icons/io5'
 import CartContext from '../../context/CartContext'
 import './index.css'
 
 const CartItem = (props) => {
-  const { decreaseQuantity, increaseQuantity } = useContext(CartContext)
+  const { decreaseQuantity, increaseQuantity, removeCartItem } = useContext(CartContext)
   const { item } = props
-  const { cost, image, name, quantity } = item
+  const { id, cost, image, name, quantity } = item
 
   const onIncreaseQuantity = () => {
-    increaseQuantity()
+    increaseQuantity(id)
   }
 
   const onDecreaseQuantity = () => {
-    decreaseQuantity()
+    decreaseQuantity(id)
+  }
+
+  const handdleDeleteItem = () => {
+    removeCartItem(id)
   }
 
 
@@ -31,20 +36,24 @@ const CartItem = (props) => {
         <div className='price-container'>
           <span className='cost'>₹ {cost}.00</span>
         </div>
+        <IoCloseCircleOutline className='delete-button' onClick={handdleDeleteItem} />
       </div>
       <div className='food-items-mobile'>
         <img className='image-mobile' src={image} alt="food" />
-        <div className='mobile-view-container'>
-          <span>{name}</span>
-          <div className='quantity-container-mobile'>
-            <div className='quantity-button' onClick={onDecreaseQuantity}>-</div>
-            <div className='quantity'>{quantity}</div>
-            <div className='quantity-button' onClick={onIncreaseQuantity}>+</div>
-          </div>
-          <div className='price-container-mobile'>
-            <span className='cost-mobile'>₹ {cost}.00</span>
+        <div>
+          <div className='mobile-view-container'>
+            <span className='item-name'>{name}</span>
+            <div className='quantity-container-mobile'>
+              <div className='quantity-button' onClick={onDecreaseQuantity}>-</div>
+              <div className='quantity'>{quantity}</div>
+              <div className='quantity-button' onClick={onIncreaseQuantity}>+</div>
+            </div>
+            <div className='price-container-mobile'>
+              <span className='cost-mobile'>₹ {cost}.00</span>
+            </div>
           </div>
         </div>
+        <IoCloseCircleOutline style={{ height: "20px", width: "20px", cursor: "pointer" }} onClick={handdleDeleteItem} />
       </div>
     </>
   )

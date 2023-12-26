@@ -71,3 +71,7 @@
     width: 24px !important;
   }
 }
+
+.link {
+  text-decoration: none;
+}

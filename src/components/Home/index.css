@@ -103,7 +103,7 @@
   }
 
   .restaurants-container {
-    padding: 20px;
+    padding: 10px 20px;
   }
 
   .heading-container {
@@ -113,7 +113,7 @@
   }
 
   .filter {
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   .restaurants-list-container {
@@ -121,5 +121,19 @@
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: nowrap;
+  }
+
+  .heading {
+    font-family: "DM Sans";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  .description-home {
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
   }
 }

@@ -54,6 +54,7 @@ const Offers = () => {
             arrows: false,
             infinite: true,
             dots: true,
+            adaptiveHeight: true
           }
         }
       ]

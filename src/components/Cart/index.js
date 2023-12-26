@@ -29,7 +29,7 @@ const Cart = () => {
               <div className='cart-header-container'>
                 <h3>Item</h3>
                 <h3>Quantity</h3>
-                <h3>Price</h3>
+                <h3 className='price-heading'>Price</h3>
               </div>
               {cartList.map(item => (
                 <CartItem key={item.id} item={item} />

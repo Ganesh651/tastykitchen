@@ -7,7 +7,8 @@ const CartContext = createContext({
   AddToCart: () => { },
   increaseQuantity: () => { },
   decreaseQuantity: () => { },
-  quantity: 1
+  quantity: 1,
+  removeCartItem: () => { }
 })
 
 

@@ -30,19 +30,27 @@ const App = () => {
   }
 
 
-  const increaseQuantity = id => {
-    if (quantity >= 1) {
-      setQuantity(quantity + 1)
-    }
+  const increaseQuantity = (id) => {
+    const updatedCart = cartList.map(item =>
+      item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+    );
+    localStorage.setItem("item", JSON.stringify(updatedCart))
+    setCartList(updatedCart);
   }
 
-
-  const decreaseQuantity = () => {
-    if (quantity >= 1) {
-      setQuantity(quantity - 1)
-    }
+  const decreaseQuantity = (id) => {
+    const updatedCart = cartList.map(item =>
+      item.id === id ? { ...item, quantity: Math.max(item.quantity - 1, 1) } : item
+    );
+    localStorage.setItem("item", JSON.stringify(updatedCart))
+    setCartList(updatedCart);
   }
 
+  const removeCartItem = (id) => {
+    const updatedCart = cartList.filter(eachItem => eachItem.id !== id)
+    localStorage.setItem("item", JSON.stringify(updatedCart))
+    setCartList(updatedCart)
+  }
 
 
   return (
@@ -52,7 +60,8 @@ const App = () => {
       quantity,
       decreaseQuantity,
       increaseQuantity,
-      setQuantity
+      setQuantity,
+      removeCartItem
     }}>
       <BrowserRouter>
         <Routes>
