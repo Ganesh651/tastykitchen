@@ -44,7 +44,7 @@ const Home = () => {
   const [searchInput, setSearchInput] = useState("")
   const [rating, setRating] = useState(sortByOptions[0].value)
   const offset = (activePage - 1) * limit
-  console.log(searchStatus, apiData, search)
+
 
   const searchHanddler = e => {
     setSearchInput((e.target.value).toLowerCase())
@@ -99,7 +99,6 @@ const Home = () => {
   }
 
   const renderLoadingView = () => {
-    console.log("Search")
     return (
       <div className='loading-container'>
         <ThreeDots height={50} width={50} color="#F7931E" />
