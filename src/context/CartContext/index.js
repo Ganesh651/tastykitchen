@@ -3,7 +3,6 @@ import { createContext } from "react";
 
 const CartContext = createContext({
   cartList: [],
-  foodItemObj: {},
   AddToCart: () => { },
   increaseQuantity: () => { },
   decreaseQuantity: () => { },

@@ -47,7 +47,6 @@ const Header = () => {
           Logout
         </button>
       </div>
-
     </nav>
   )
 }

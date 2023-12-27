@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { FaStar } from 'react-icons/fa'
 import CartContext from '../../context/CartContext'
 import './index.css'
@@ -21,9 +22,11 @@ const FoodItemList = (props) => {
           <FaStar style={{ color: "#FFCC00", height: "12px", width: "12px", marginRight: "3px" }} />
           <span className='food-item-rating'>{foodItem.rating}</span>
         </div>
-        <button type="button" className='add-btn' onClick={onAddFoodItem}>
-          ADD
-        </button>
+        <Link to="/cart" className='link' >
+          <button type="button" className='add-btn' onClick={onAddFoodItem}>
+            ADD
+          </button>
+        </Link>
       </div>
     </div>
   )

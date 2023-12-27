@@ -96,10 +96,62 @@
   text-align: center;
 }
 
+.heading-and-search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-container input {
+  background-color: transparent;
+  outline: none;
+  font-weight: 500;
+  border: 0;
+  padding: 5px;
+}
+
+.search-container {
+  border: 1px solid #183B56;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-button {
+  background-color: rgb(169, 171, 170);
+  outline: none;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  cursor: pointer;
+}
+
+.search-container-mobile {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
+  .search-container-mobile {
+    display: block;
+  }
+
+  .search-container {
+    display: none;
+  }
+
   .home-container {
     padding: 0;
     background-color: transparent;
+  }
+
+  .heading-and-search-container {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .restaurants-container {
