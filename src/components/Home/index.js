@@ -110,7 +110,7 @@ const Home = () => {
     <div className='restaurants-container'>
       <div className='heading-and-search-container'>
         <span className='heading'>Popular Restaurants</span>
-        <div className='search-container'>
+        {/* <div className='search-container'>
           <input type="search"
             className='search-input'
             placeholder='Search restaurant'
@@ -120,7 +120,7 @@ const Home = () => {
           <div className='search-button' onClick={handdleSearchRestaurant}>
             <CiSearch />
           </div>
-        </div>
+        </div> */}
       </div>
       <div className='heading-container'>
         <span className='description-home'>Select Your favourite restaurant special dish and make your day happy...</span>
@@ -133,7 +133,7 @@ const Home = () => {
               </option>
             ))}
           </select>
-          <div className='search-container-mobile'>
+          {/* <div className='search-container-mobile'>
             <input type="search"
               className='search-input'
               placeholder='Search restaurant'
@@ -143,7 +143,7 @@ const Home = () => {
             <div className='search-button-mobile' onClick={handdleSearchRestaurant}>
               <CiSearch />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <hr />
