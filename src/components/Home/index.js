@@ -133,11 +133,21 @@ const Home = () => {
               </option>
             ))}
           </select>
+          <div className='search-container-mobile'>
+            <input type="search"
+              className='search-input'
+              placeholder='Search restaurant'
+              onChange={searchHanddler}
+              value={searchInput}
+            />
+            <div className='search-button-mobile' onClick={handdleSearchRestaurant}>
+              <CiSearch />
+            </div>
+          </div>
         </div>
       </div>
       <hr />
       <div className='restaurants-list-container'>
-
         {search ? <>
           {searchStatus === "INPROGRESS" ? <div className='loading-container'>
             <ThreeDots height={50} width={50} color="#F7931E" />

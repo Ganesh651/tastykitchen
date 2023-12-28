@@ -30,7 +30,7 @@ const Login = () => {
   const [showErrorMessage, setShowErrorMessage] = useState(false)
   const navigate = useNavigate()
 
-
+  console.log(navigate)
   const renderSuccessView = jwtToken => {
     Cookies.set("jwt_token", jwtToken, { expires: 10 })
     navigate("/")
