@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Login from "./components/Login";
 import Home from './components/Home'
 import Cart from './components/Cart'
@@ -26,8 +26,11 @@ const App = () => {
       quantity
     }
     setCartList(prevState => [...prevState, newItem])
-    localStorage.setItem("item", JSON.stringify(cartList))
   }
+
+  useEffect(() => {
+    localStorage.setItem("item", JSON.stringify(cartList))
+  })
 
 
   const increaseQuantity = (id) => {
@@ -86,7 +89,14 @@ const App = () => {
               <Profile />
             </ProtectedRoute>
           } />
-          <Route path="*" element={<Notfound />} />
+          <Route path="*" element={
+            <Notfound />
+          } />
+          <Route path="*" element={
+            <ProtectedRoute>
+              <Notfound />
+            </ProtectedRoute>
+          } />
         </Routes>
       </BrowserRouter>
     </CartContext.Provider>
