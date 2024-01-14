@@ -100,6 +100,7 @@ const App = () => {
         </Routes>
       </BrowserRouter>
     </CartContext.Provider>
+
   )
 }
 
